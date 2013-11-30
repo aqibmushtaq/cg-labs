@@ -62,9 +62,12 @@ public class GObject {
 				face[i] = new Face(vertix, color);
 			}
 			
-		} catch (NumberFormatException | IOException e) {
+		} catch (NumberFormatException e) {
 			e.printStackTrace();
 			return;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
 		} finally {
 			if (br == null)
 				try {
