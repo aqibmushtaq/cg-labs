@@ -9,6 +9,12 @@ import java.awt.image.BufferedImage;
 @SuppressWarnings("serial")
 public class Animator extends JFrame {
 
+    private static final int WIDTH = 400;
+    private static final int HEIGHT = 300;
+    private static final int INTERVAL = 50;
+
+    private BufferedImage image;
+
 	public Animator() {
 		setSize(WIDTH, HEIGHT);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -44,12 +50,7 @@ public class Animator extends JFrame {
 	}
 
 	public final void paint(Graphics g) {
-	}
-
-	private static final int WIDTH = 400;
-	private static final int HEIGHT = 300;
-	private static final int INTERVAL = 100;
-	private BufferedImage image;
+    }
 
 	public static void main(String[] args) {
 		new Animator().loop();
