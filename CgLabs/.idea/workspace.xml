@@ -6,11 +6,12 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/GObject.java" changelist="0320bc5d-e00a-4b95-aa6e-4326776d6b4c" time="1385831958738" ignored="false" />
     <file path="/Animator.java" changelist="0320bc5d-e00a-4b95-aa6e-4326776d6b4c" time="1385847553144" ignored="false" />
-    <file path="/Camera.java" changelist="0320bc5d-e00a-4b95-aa6e-4326776d6b4c" time="1385867227354" ignored="false" />
+    <file path="/Camera.java" changelist="0320bc5d-e00a-4b95-aa6e-4326776d6b4c" time="1385872344687" ignored="false" />
     <file path="/Scene.java" changelist="0320bc5d-e00a-4b95-aa6e-4326776d6b4c" time="1385865542560" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Crap/src/crap/crap1.java" changelist="0320bc5d-e00a-4b95-aa6e-4326776d6b4c" time="1385867071077" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Crap/src/crap/crap1.java" changelist="0320bc5d-e00a-4b95-aa6e-4326776d6b4c" time="1385872154431" ignored="false" />
     <file path="/crap1.java" changelist="0320bc5d-e00a-4b95-aa6e-4326776d6b4c" time="1385866916748" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Crap/src/crap/crap2.java" changelist="0320bc5d-e00a-4b95-aa6e-4326776d6b4c" time="1385867062392" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Crap/src/crap/crap2.java" changelist="0320bc5d-e00a-4b95-aa6e-4326776d6b4c" time="1385872168135" ignored="false" />
+    <file path="/PerspectiveCamera.java" changelist="0320bc5d-e00a-4b95-aa6e-4326776d6b4c" time="1385872461678" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,23 +63,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/labs/Scene.java" line="47" class="labs.Scene" package="labs">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -88,19 +72,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Animator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labs/Animator.java">
+      <file leaf-file-name="Scene.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/labs/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="143" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
+            <state line="47" column="0" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scene.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labs/Scene.java">
+      <file leaf-file-name="Camera.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/labs/Camera.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
+            <state line="36" column="13" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Animator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/labs/Animator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="178" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParallelAnimator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/labs/ParallelAnimator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="0" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PerspectiveCamera.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/labs/PerspectiveCamera.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="4" selection-start="904" selection-end="904" vertical-scroll-proportion="-21.08">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PerspectiveAnimator.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/labs/PerspectiveAnimator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="65" selection-start="379" selection-end="380" vertical-scroll-proportion="0.29608127">
               <folding />
             </state>
           </provider>
@@ -119,26 +141,6 @@
         <entry file="file://$PROJECT_DIR$/src/labs/Vector3D.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="45" column="24" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParallelAnimator.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/labs/ParallelAnimator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="39" selection-start="526" selection-end="526" vertical-scroll-proportion="0.5674891">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Camera.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/labs/Camera.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="20" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,6 +175,8 @@
         <option value="$PROJECT_DIR$/src/labs/Animator.java" />
         <option value="$PROJECT_DIR$/cube.dat" />
         <option value="$PROJECT_DIR$/src/labs/Camera.java" />
+        <option value="$PROJECT_DIR$/src/labs/PerspectiveAnimator.java" />
+        <option value="$PROJECT_DIR$/src/labs/PerspectiveCamera.java" />
       </list>
     </option>
   </component>
@@ -268,7 +272,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Application.ParallelAnimator">
+  <component name="RunManager" selected="Application.PerspectiveAnimator">
     <configuration default="false" name="Animator" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="labs.Animator" />
       <option name="VM_PARAMETERS" />
@@ -293,6 +297,28 @@
     </configuration>
     <configuration default="false" name="ParallelAnimator" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="labs.ParallelAnimator" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CgLabs" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PerspectiveAnimator" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="labs.PerspectiveAnimator" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -401,14 +427,16 @@
       <patterns />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.Animator" />
       <item index="1" class="java.lang.String" itemvalue="Application.ParallelAnimator" />
+      <item index="2" class="java.lang.String" itemvalue="Application.PerspectiveAnimator" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.ParallelAnimator" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Animator" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Application.PerspectiveAnimator" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ParallelAnimator" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Animator" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -538,27 +566,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/awt/image/BufferedImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="86" selection-start="3009" selection-end="3009" vertical-scroll-proportion="-2.2798166">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/awt/Graphics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="399" column="42" selection-start="16903" selection-end="16962" vertical-scroll-proportion="0.21527778">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/awt/Container.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1950" column="16" selection-start="74377" selection-end="74377" vertical-scroll-proportion="0.421875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/awt/Window.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3917" column="135" selection-start="147965" selection-end="147965" vertical-scroll-proportion="7.6284404">
@@ -615,6 +622,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="13" selection-start="513" selection-end="513" vertical-scroll-proportion="0.3207547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labs/Animator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="178" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labs/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="0" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labs/ParallelAnimator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/labs/Point3D.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="22" selection-start="855" selection-end="855" vertical-scroll-proportion="0.0">
@@ -622,33 +659,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labs/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labs/Animator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="143" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/labs/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="20" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.0">
+        <state line="36" column="13" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labs/ParallelAnimator.java">
+    <entry file="file://$PROJECT_DIR$/src/labs/PerspectiveCamera.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="526" selection-end="526" vertical-scroll-proportion="0.5674891">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="32" column="4" selection-start="904" selection-end="904" vertical-scroll-proportion="-21.08">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labs/PerspectiveAnimator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="65" selection-start="379" selection-end="380" vertical-scroll-proportion="0.29608127">
+          <folding />
         </state>
       </provider>
     </entry>

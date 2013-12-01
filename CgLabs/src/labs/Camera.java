@@ -30,11 +30,11 @@ public class Camera {
         return new Point3D(p.x, p.y, p.z);
     }
 
-    private Point3D projectionTransform(final Point3D p) {
+    protected Point3D projectionTransform(final Point3D p) {
         return new Point3D(p.x,p.y,0);
     }
 
-    private Point3D viewportTransform(final Point3D p) {
+    protected Point3D viewportTransform(final Point3D p) {
         double xPrime = ax + bx*p.x;
         double yPrime = ay + by*p.y;
         return new Point3D(xPrime, yPrime, 0);
