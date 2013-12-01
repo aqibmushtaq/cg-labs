@@ -32,8 +32,7 @@ public class Point3D {
 	
 	public static boolean isFrontFace(Point3D p1, Point3D p2, Point3D p3, Vector3D vpn) {
 		double nDotVpn = faceNormal(p1, p2, p3).dotProduct(vpn);
-		double halfPi = Math.PI/2;
-		return nDotVpn >= -halfPi && nDotVpn <= halfPi ? true : false;
+		return nDotVpn > 0 ? true : false;
 	}
 	
 	public Point3D transform(Matrix m)
