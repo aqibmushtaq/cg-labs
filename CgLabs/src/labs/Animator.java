@@ -9,9 +9,9 @@ import java.awt.image.BufferedImage;
 @SuppressWarnings("serial")
 public class Animator extends JFrame {
 
-    private static final int WIDTH = 400;
-    private static final int HEIGHT = 300;
-    private static final int INTERVAL = 50;
+    private static final int WIDTH = 1920;
+    private static final int HEIGHT = 1000;
+    private static final int INTERVAL = 100;
 
     private BufferedImage image;
 

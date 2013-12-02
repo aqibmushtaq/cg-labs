@@ -35,11 +35,10 @@ public class Point3D {
 		return nDotVpn > 0 ? true : false;
 	}
 	
-	public Point3D transform(Matrix m)
-	{
+	public Point3D transform(Matrix m) {
 		double x = this.x*m.m[0][0]+this.y*m.m[0][1]+this.z*m.m[0][2]+m.m[0][3];
 		double y = this.x*m.m[1][0]+this.y*m.m[1][1]+this.z*m.m[1][2]+m.m[1][3];	
 		double z = this.x*m.m[2][0]+this.y*m.m[2][1]+this.z*m.m[2][2]+m.m[2][3];
-		return new Point3D(x,y,z);
+		return new Point3D(x, y, z);
 	}
 }

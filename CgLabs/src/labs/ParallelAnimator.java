@@ -35,9 +35,9 @@ public class ParallelAnimator extends Animator {
             return;
 
         Matrix mX = new Matrix(), mY = new Matrix(), mZ = new Matrix();
-        mX.setRotationX(-PI / 11);
-        mY.setRotationY(PI / 13);
-        mZ.setRotationZ(PI / 17);
+        mX.setRotationX(-PI / 1);
+        mY.setRotationY(PI / 5);
+        mZ.setRotationZ(PI / 1);
         scene.transform(mZ.multiply(mY.multiply(mX)));
 
         scene.draw(camera, g);
