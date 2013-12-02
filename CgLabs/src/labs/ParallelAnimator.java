@@ -13,7 +13,7 @@ import static java.lang.Math.*;
  * To change this template use File | Settings | File Templates.
  */
 public class ParallelAnimator extends Animator {
-    private static final String[] files = {"./cube.dat", "./pyramid.dat"};
+    private static final String[] files = {"./cube.dat", "./pyramid.dat", "./box.dat"};
     protected Camera camera;
     private Scene scene;
 
