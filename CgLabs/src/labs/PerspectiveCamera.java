@@ -10,7 +10,7 @@ import static java.lang.Math.*;
  * To change this template use File | Settings | File Templates.
  */
 public class PerspectiveCamera extends Camera {
-    private Point3D cop = new Point3D(0, 0, -4); //centre of projection
+    private Point3D cop = new Point3D(0, 0, -4); // centre of projection
 
     public PerspectiveCamera(double xmin, double xmax, double ymin, double ymax) {
         super(xmin, xmax, ymin, ymax);
@@ -24,11 +24,13 @@ public class PerspectiveCamera extends Camera {
     protected Point3D projectionTransform(final Point3D p) {
         double distance = cop.distance(new Point3D(0, 0, 0));
 
-        double xPrime = (p.x * distance) / abs((p.z - cop.z));
-        double yPrime = (p.y * distance) / abs((p.z - cop.z));
-        double zPrime = 0;
+        // get the x and y coordinates relative to the distance of COP
+        // and the distance from the object
+        double x = (p.x * distance) / abs((p.z - cop.z));
+        double y = (p.y * distance) / abs((p.z - cop.z));
+        double z = 0;
 
-        return new Point3D(xPrime, yPrime, zPrime);
+        return new Point3D(x, y, z);
     }
 
     public void setupCOP(Point3D cop) {
