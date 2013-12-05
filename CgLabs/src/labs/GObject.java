@@ -37,10 +37,6 @@ public class GObject {
 
             br.readLine();
 
-            //colour
-            input = br.readLine();
-            comp = input.split("\\s");
-
             //input faces
             face = new Face[Integer.parseInt(br.readLine().trim())];
             for (int i = 0; i < face.length && br.ready(); i++) {
@@ -52,6 +48,10 @@ public class GObject {
                 for (int j = 0; j < comp.length; j++) {
                     vertix[j] = Integer.parseInt(comp[j]);
                 }
+
+                //colour
+                input = br.readLine();
+                comp = input.split("\\s");
                 Color color = new Color(
                         Float.parseFloat(comp[0]),
                         Float.parseFloat(comp[1]),
