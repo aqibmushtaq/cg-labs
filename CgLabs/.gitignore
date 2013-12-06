@@ -13,6 +13,8 @@
 
 # Intellij
 .idea/
+bin/
+out/
 *.iml
 *.iws
 
