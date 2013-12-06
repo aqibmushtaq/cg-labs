@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_cglabs" default="compile.module.cglabs">
+  <dirname property="module.cglabs.basedir" file="${ant.file.module_cglabs}"/>
+  
+  <property name="module.jdk.home.cglabs" value="${jdk.home.1.7}"/>
+  <property name="module.jdk.bin.cglabs" value="${jdk.bin.1.7}"/>
+  <property name="module.jdk.classpath.cglabs" value="jdk.classpath.1.7"/>
+  
+  <property name="compiler.args.cglabs" value="${compiler.args}"/>
+  
+  <property name="cglabs.output.dir" value="${module.cglabs.basedir}/bin"/>
+  <property name="cglabs.testoutput.dir" value="${module.cglabs.basedir}/bin"/>
+  
+  <path id="cglabs.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="cglabs.module.production.classpath">
+    <path refid="${module.jdk.classpath.cglabs}"/>
+    <pathelement location="${idea.home}/lib/junit-4.10.jar"/>
+  </path>
+  
+  <path id="cglabs.runtime.production.module.classpath">
+    <pathelement location="${cglabs.output.dir}"/>
+    <pathelement location="${idea.home}/lib/junit-4.10.jar"/>
+  </path>
+  
+  <path id="cglabs.module.classpath">
+    <pathelement location="${cglabs.output.dir}"/>
+    <path refid="${module.jdk.classpath.cglabs}"/>
+    <pathelement location="${idea.home}/lib/junit-4.10.jar"/>
+  </path>
+  
+  <path id="cglabs.runtime.module.classpath">
+    <pathelement location="${cglabs.output.dir}"/>
+    <pathelement location="${idea.home}/lib/junit-4.10.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.cglabs">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.cglabs">
+    <patternset refid="excluded.from.module.cglabs"/>
+  </patternset>
+  
+  <path id="cglabs.module.sourcepath">
+    <dirset dir="${module.cglabs.basedir}">
+      <include name="src"/>
+      <include name="test"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.cglabs" depends="compile.module.cglabs.production,compile.module.cglabs.tests" description="Compile module CgLabs"/>
+  
+  <target name="compile.module.cglabs.production" depends="register.custom.compilers" description="Compile module CgLabs; production classes">
+    <mkdir dir="${cglabs.output.dir}"/>
+    <javac2 destdir="${cglabs.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.cglabs}/javac">
+      <compilerarg line="${compiler.args.cglabs}"/>
+      <bootclasspath refid="cglabs.module.bootclasspath"/>
+      <classpath refid="cglabs.module.production.classpath"/>
+      <src refid="cglabs.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.cglabs"/>
+    </javac2>
+    
+    <copy todir="${cglabs.output.dir}">
+      <fileset dir="${module.cglabs.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.cglabs.basedir}/test">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.cglabs.tests" depends="register.custom.compilers,compile.module.cglabs.production" description="compile module CgLabs; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.cglabs" description="cleanup module">
+    <delete dir="${cglabs.output.dir}"/>
+    <delete dir="${cglabs.testoutput.dir}"/>
+  </target>
+</project>
