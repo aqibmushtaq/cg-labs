@@ -32,14 +32,14 @@ public class PerspectiveAnimator extends ParallelAnimator {
     public static void showHelp (Component parent) {
         JOptionPane.showMessageDialog(parent,
                 "Help: F1\n\n" +
-                        "Speed up X: a\n" +
-                        "Slow down X: z\n\n" +
+                        "Speed up X: A\n" +
+                        "Slow down X: Z\n\n" +
 
-                        "Speed up Y: s\n" +
-                        "Slow down Y: x\n\n" +
+                        "Speed up Y: S\n" +
+                        "Slow down Y: X\n\n" +
 
-                        "Speed up Z: d\n" +
-                        "Slow down Z: c\n\n" +
+                        "Speed up Z: D\n" +
+                        "Slow down Z: C\n\n" +
 
                         "Un-Perspective Mode: F\n" +
                         "Perspective Mode: V"
