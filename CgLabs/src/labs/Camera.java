@@ -53,9 +53,11 @@ public class Camera {
         double vYMin = 0;
         double vYMax = height;
 
+        // view point
         double dVX = vXMax - vXMin;
         double dVY = vYMax - vYMin;
 
+        // window
         double dWX = xmax - xmin;
         double dWY = ymax - ymin;
 
