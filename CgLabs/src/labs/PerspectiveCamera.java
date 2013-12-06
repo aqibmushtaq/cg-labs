@@ -10,7 +10,7 @@ import static java.lang.Math.*;
  * To change this template use File | Settings | File Templates.
  */
 public class PerspectiveCamera extends Camera {
-    private Point3D cop = new Point3D(0, 0, -4); // centre of projection
+    private Point3D cop; // centre of projection
 
     public PerspectiveCamera(double xmin, double xmax, double ymin, double ymax) {
         super(xmin, xmax, ymin, ymax);

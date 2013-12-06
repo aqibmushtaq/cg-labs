@@ -17,8 +17,6 @@ public class ParallelAnimator extends Animator {
     protected Camera camera;
     private Scene scene;
 
-
-
     private double xRotation = 17;
     private double yRotation = 50;
     private double zRotation = 20;
@@ -77,5 +75,9 @@ public class ParallelAnimator extends Animator {
         if (zRotation == 1)
             return;
         zRotation -= 1;
+    }
+
+    public void setCamera (Camera c) {
+        camera = c;
     }
 }

@@ -1,6 +1,7 @@
 package labs;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -21,18 +22,28 @@ public class PerspectiveAnimator extends ParallelAnimator {
 
         PerspectiveAnimator pa = new PerspectiveAnimator();
 
-        JOptionPane.showMessageDialog(pa,
-                "Speed up x: a\n" +
-                        "Slow down x: z\n\n" +
-                        "Speed up y: s\n" +
-                        "Slow down y: x\n\n" +
-                        "Speed up z: d\n" +
-                        "Slow down z: c\n"
-        );
+        showHelp(pa);
 
         pa.addKeyListener(new PerspectiveKeyListener(pa));
 
         pa.loop();
+    }
+
+    public static void showHelp (Component parent) {
+        JOptionPane.showMessageDialog(parent,
+                "Help: F1\n\n" +
+                        "Speed up X: a\n" +
+                        "Slow down X: z\n\n" +
+
+                        "Speed up Y: s\n" +
+                        "Slow down Y: x\n\n" +
+
+                        "Speed up Z: d\n" +
+                        "Slow down Z: c\n\n" +
+
+                        "Un-Perspective Mode: F\n" +
+                        "Perspective Mode: V"
+        );
     }
 }
 class PerspectiveKeyListener implements KeyListener {
@@ -53,20 +64,39 @@ class PerspectiveKeyListener implements KeyListener {
 
         int keyCode = e.getKeyCode();
 
+        //change x-axis speed
         if (keyCode == KeyEvent.VK_A)
             animator.decreaseXRotation();
         else if (keyCode == KeyEvent.VK_Z)
             animator.increaseXRotation();
 
+        //change y-axis speed
         else if (keyCode == KeyEvent.VK_S)
             animator.decreaseYRotation();
         else if (keyCode == KeyEvent.VK_X)
             animator.increaseYRotation();
 
+        //change z-axis speed
         else if (keyCode == KeyEvent.VK_D)
             animator.decreaseZRotation();
         else if (keyCode == KeyEvent.VK_C)
             animator.increaseZRotation();
+
+        //change to un-perspective camera
+        else if (keyCode == KeyEvent.VK_F)
+            animator.setCamera(new Camera(-5, 5,-5 ,5));
+
+        //change to perspective camera
+        else if (keyCode == KeyEvent.VK_V) {
+            PerspectiveCamera c = new PerspectiveCamera(-5, 5, -5, 5);
+            c.setupCOP(new Point3D(0, 0, 3));
+            animator.setCamera(c);
+        }
+
+        //show help
+        else if (keyCode == KeyEvent.VK_F1)
+            PerspectiveAnimator.showHelp(target);
+
     }
 
     @Override
