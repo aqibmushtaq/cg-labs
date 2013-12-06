@@ -12,8 +12,8 @@ import java.awt.image.BufferedImage;
 public class Animator extends JFrame {
 
     //TODO use system specific dimensions
-    private static final int WIDTH = 1920;
-    private static final int HEIGHT = 800;
+    private static final int WIDTH = 800;
+    private static final int HEIGHT = 600;
     private static final int INTERVAL = 100;
 
     private BufferedImage image;
