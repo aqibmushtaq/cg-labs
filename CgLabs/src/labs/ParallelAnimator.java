@@ -13,9 +13,15 @@ import static java.lang.Math.*;
  * To change this template use File | Settings | File Templates.
  */
 public class ParallelAnimator extends Animator {
-    private static final String[] files = {"./cube.dat", "./pyramid.dat", "./box.dat"};
+    private static final String[] files = {"./cube.dat", "./pyramid.dat", /*"./box.dat"*/};
     protected Camera camera;
     private Scene scene;
+
+
+
+    private double xRotation = 17;
+    private double yRotation = 50;
+    private double zRotation = 20;
 
     public ParallelAnimator() {
         super();
@@ -35,15 +41,41 @@ public class ParallelAnimator extends Animator {
             return;
 
         Matrix mX = new Matrix(), mY = new Matrix(), mZ = new Matrix();
-        mX.setRotationX(-PI / 1);
-        mY.setRotationY(PI / 5);
-        mZ.setRotationZ(PI / 1);
+        mX.setRotationX(-PI / xRotation);
+        mY.setRotationY(PI / yRotation);
+        mZ.setRotationZ(PI / zRotation);
         scene.transform(mZ.multiply(mY.multiply(mX)));
 
         scene.draw(camera, g);
     }
 
-    public static void main(String[] args) {
-        new ParallelAnimator().loop();
+    public void increaseXRotation() {
+        xRotation += 1;
+    }
+
+    public void decreaseXRotation() {
+        if (xRotation == 1)
+            return;
+        xRotation -= 1;
+    }
+
+    public void increaseYRotation() {
+        yRotation += 1;
+    }
+
+    public void decreaseYRotation() {
+        if (yRotation == 1)
+            return;
+        yRotation -= 1;
+    }
+
+    public void increaseZRotation() {
+        zRotation += 1;
+    }
+
+    public void decreaseZRotation() {
+        if (zRotation == 1)
+            return;
+        zRotation -= 1;
     }
 }

@@ -4,13 +4,16 @@ import java.awt.*;
 
 import javax.swing.*;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 
 @SuppressWarnings("serial")
 public class Animator extends JFrame {
 
+    //TODO use system specific dimensions
     private static final int WIDTH = 1920;
-    private static final int HEIGHT = 1000;
+    private static final int HEIGHT = 800;
     private static final int INTERVAL = 100;
 
     private BufferedImage image;
@@ -51,8 +54,4 @@ public class Animator extends JFrame {
 
 	public final void paint(Graphics g) {
     }
-
-	public static void main(String[] args) {
-		new Animator().loop();
-	}
 }
